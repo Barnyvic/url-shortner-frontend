@@ -56,11 +56,14 @@ const SignUp = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:5000/auth/register", {
-        email,
-        fullName,
-        password,
-      });
+      const response = await axios.post(
+        "https://barny.cyclic.app/auth/register",
+        {
+          email,
+          fullName,
+          password,
+        }
+      );
 
     if (response.status === 201) {
       toast.success(response.data.message);

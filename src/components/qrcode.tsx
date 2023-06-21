@@ -25,7 +25,7 @@ function Qrcode({ responseData }: ShorterProps) {
           Authorization: `Bearer ${token}`,
         };
         const response = await axios.get(
-          `http://localhost:5000/qr/${shortUrl}`,
+          `https://barny.cyclic.app/qr/${shortUrl}`,
           {
             headers: headers,
           }
