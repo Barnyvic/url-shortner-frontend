@@ -19,36 +19,7 @@ function App() {
 
   return (
     <div>
-      <Router>
-        <Routes>
-          {/*  */}
-          <Route
-            path="/login"
-            element={
-              isLoggedIn ? (
-                <Navigate to="/dashboard" />
-              ) : (
-                <Login onLogin={handleLogin} />
-              )
-            }
-          />
-          <Route
-            path="/signup"
-            element={
-              isLoggedIn ? (
-                <Navigate to="/dashboard" />
-              ) : (
-                <SignUp onSignup={handleLogin} />
-              )
-            }
-          />
-          <Route
-            path="/dashboard"
-            element={isLoggedIn ? <Layout /> : <Navigate to="/login" />}
-          />
-          {/*  */}
-        </Routes>
-      </Router>
+      <h1>hello world </h1>
     </div>
   );
 }
