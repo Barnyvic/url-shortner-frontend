@@ -4,11 +4,8 @@ import "react-toastify/dist/ReactToastify.css";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 
-interface SignupProps {
-  onSignup: () => void;
-}
 
-const SignUp: React.FC<SignupProps> = () => {
+const SignUp = () => {
   const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
