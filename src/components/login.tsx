@@ -48,7 +48,7 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
 
           setTimeout(() => {
             onLogin();
-            navigate("/dashboard");
+            navigate("/");
           }, 2000);
         }
         // Save token to local storage

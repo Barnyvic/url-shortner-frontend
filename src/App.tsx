@@ -19,8 +19,30 @@ function App() {
 
   return (
     <div>
-      <Login onLogin={handleLogin} />
-      <SignUp />
+      <Router>
+        <Routes>
+          {/*  */}
+          <Route
+            path="/login"
+            element={
+              isLoggedIn ? (
+                <Navigate to="/" />
+              ) : (
+                <Login onLogin={handleLogin} />
+              )
+            }
+          />
+          <Route
+            path="/signup"
+            element={isLoggedIn ? <Navigate to="/" /> : <SignUp />}
+          />
+          <Route
+            path="/"
+            element={isLoggedIn ? <Layout /> : <Navigate to="/login" />}
+          />
+          {/*  */}
+        </Routes>
+      </Router>
     </div>
   );
 }
