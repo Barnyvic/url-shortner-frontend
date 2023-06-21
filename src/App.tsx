@@ -9,6 +9,7 @@ import {
   Routes,
   Navigate,
 } from "react-router-dom";
+import NotFound from "./components/notFound";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -25,11 +26,7 @@ function App() {
           <Route
             path="/login"
             element={
-              isLoggedIn ? (
-                <Navigate to="/" />
-              ) : (
-                <Login onLogin={handleLogin} />
-              )
+              isLoggedIn ? <Navigate to="/" /> : <Login onLogin={handleLogin} />
             }
           />
           <Route
@@ -40,7 +37,7 @@ function App() {
             path="/"
             element={isLoggedIn ? <Layout /> : <Navigate to="/login" />}
           />
-          {/*  */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
     </div>
