@@ -52,7 +52,7 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
           setTimeout(() => {
             onLogin();
             navigate("/");
-          }, 2000);
+          }, 1000);
         }
         // Save token to local storage
       } catch (error: any) {
