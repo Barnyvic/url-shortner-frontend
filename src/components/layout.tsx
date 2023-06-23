@@ -63,7 +63,10 @@ function Layout() {
   return (
     <>
       <NavbarPage />
-      <div className="container m-5 p-4 border border-primary">
+      <div
+        className="container m-3 p-4 border "
+        style={{ height: "75vh" }}
+      >
         <h1 className="text-center fw-bold">URL... Shortner</h1>
 
         {/* create the form and add submit functionality */}
