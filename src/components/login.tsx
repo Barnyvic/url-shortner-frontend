@@ -36,13 +36,10 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
 
     if (email && password) {
       try {
-        const response = await axios.post(
-          "https://barny.cyclic.app/auth/login",
-          {
-            email,
-            password,
-          }
-        );
+        const response = await axios.post("http://localhost:5000/auth/login", {
+          email,
+          password,
+        });
 
         if (response.data.statusCode === 200) {
           localStorage.setItem("token", response.data.data);
@@ -52,7 +49,7 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
           setTimeout(() => {
             onLogin();
             navigate("/");
-          }, 1000);
+          }, 2000);
         }
         // Save token to local storage
       } catch (error: any) {

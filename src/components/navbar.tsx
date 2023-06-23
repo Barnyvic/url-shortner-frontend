@@ -1,4 +1,5 @@
-import { Nav, Navbar, Container, NavDropdown } from "react-bootstrap";
+import { Nav, Navbar, Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 function NavbarPage() {
   return (
@@ -11,23 +12,14 @@ function NavbarPage() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="#link">Link</Nav.Link>
-              <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">
-                  Dropdown Item 1
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Dropdown Item 2
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Dropdown Item 3
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Another Item
-                </NavDropdown.Item>
-              </NavDropdown>
+              <Nav className="me-auto">
+                <Nav.Link as={Link} to="/">
+                  Home
+                </Nav.Link>
+                <Nav.Link as={Link} to="/history">
+                  History
+                </Nav.Link>
+              </Nav>
             </Nav>
           </Navbar.Collapse>
         </Container>

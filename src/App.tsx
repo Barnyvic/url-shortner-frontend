@@ -10,6 +10,7 @@ import {
   Navigate,
 } from "react-router-dom";
 import NotFound from "./components/notFound";
+import History from "./components/userHistory";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -37,6 +38,7 @@ function App() {
             path="/"
             element={isLoggedIn ? <Layout /> : <Navigate to="/login" />}
           />
+          <Route path="/history" element={<History />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>

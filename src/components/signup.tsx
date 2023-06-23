@@ -4,7 +4,6 @@ import "react-toastify/dist/ReactToastify.css";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 
-
 const SignUp = () => {
   const navigate = useNavigate();
 
@@ -49,7 +48,6 @@ const SignUp = () => {
       return;
     }
 
-
     if (password !== confirmPassword) {
       toast.error("Passwords do not match");
       return;
@@ -64,13 +62,13 @@ const SignUp = () => {
           password,
         }
       );
-   console.log(response)
-    if (response.status === 201) {
-      toast.success(response.data.message);
-      setTimeout(() => {
-        navigate("/login");
-      }, 4000);
-    }
+      console.log(response);
+      if (response.status === 201) {
+        toast.success(response.data.message);
+        setTimeout(() => {
+          navigate("/login");
+        }, 1000);
+      }
     } catch (error) {
       console.error("Error signing up:", error);
       toast.error("Failed to sign up. Please try again later.");
