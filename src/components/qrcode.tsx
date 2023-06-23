@@ -44,7 +44,7 @@ function Qrcode({ responseData }: ShorterProps) {
   }, []);
 
 return (
-  <div className="text-end m-3 p-3 border border-success">
+  <div className="text-end m-3 p-3 border border-white">
     <p className="h4">QR Code</p>
     {qrCodeData && (
       <div className="d-flex justify-content-end">

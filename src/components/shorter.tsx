@@ -4,7 +4,7 @@ interface ShorterProps {
 
 function Shorter({ responseData }: ShorterProps) {
   return (
-    <div className="text-start m-3 p-3 border border-success w-50">
+    <div className="text-start m-3 p-3 border border-white w-50">
       <p className=" h4">
         Shortened URL:{" "}
         <a
